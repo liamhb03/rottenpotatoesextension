@@ -11,8 +11,13 @@
  "content_scripts": [
   {
     "matches": ["<all_urls>"],
-    "js": ["script.js"]
+    "js": ["script.js", "jquery.min.js"],
+    "exclude_globs": [ "*options*"]
   }
 ],
- "permissions": ["activeTab"]
+"options_ui": {
+  "page": "options.html",
+  "open_in_tab": false
+},
+ "permissions": ["activeTab", "storage"]
 }
