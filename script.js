@@ -30,19 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
     link.addEventListener('click', function() {
         chrome.storage.sync.get('url', function(result) {
             var url = document.getElementById('url').value;
-            var regex = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
-            if(regex.test(url)) {
-                chrome.storage.sync.set({
-                    url: url
-                }, function(result) {
-                    console.log("saved")
-                    console.log(result);
-                });
-                document.getElementById("currentURL").innerHTML = url;
-            }
-            else {
-                alert("Please enter a valid URL");
-            }
+            chrome.storage.sync.set({
+                url: url
+            }, function(result) {
+                console.log("saved")
+                console.log(result);
+            });
+            document.getElementById("currentURL").innerHTML = url;
         });
     });
 });
@@ -50,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 chrome.storage.sync.get('url', function(result) {
     if(result.url == undefined) {
         chrome.storage.sync.set({
-            url: 'https://www.youtube.com/watch?v=a3Z7zEc7AXQ'
+            url: 'https://www.youtube.com/watch?v=9p8-feOC1gM'
         }, function(result) {
             console.log("saved")
             console.log(result);
