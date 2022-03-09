@@ -1,8 +1,7 @@
+var currentTime = new Date();
 window.onload = rick;
-
-if (Date.getMonth() == 3 && Date.getDate() == 9) {
-
 function rick() {
+if (currentTime.getMonth() == 2 && currentTime.getDate() == 9) {
     var links = document.getElementsByTagName('a');
     for (var i = 0; i < links.length; i++) {
     var link = links[i];
@@ -12,5 +11,4 @@ function rick() {
 }
 }
 }
-
 }
