@@ -15,6 +15,9 @@ if (currentTime.getMonth() == 2 && currentTime.getDate() == 9) {
 }
 }
 
+
+
+//Show current value of url as value currentURL.
 if(window.location.href.indexOf("options") > -1) {
     chrome.storage.sync.get('url', function(result) {
         document.getElementById("currentURL").innerHTML = result.url;
@@ -23,6 +26,7 @@ if(window.location.href.indexOf("options") > -1) {
 
 document.addEventListener('DOMContentLoaded', function() {
     var link = document.getElementById('submit');
+    // onClick's logic below:
     link.addEventListener('click', function() {
         chrome.storage.sync.get('url', function(result) {
             var url = document.getElementById('url').value;
@@ -31,11 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 chrome.storage.sync.set({
                     url: url
                 }, function(result) {
-               
+                    console.log("saved")
+                    console.log(result);
                 });
+                document.getElementById("currentURL").innerHTML = url;
             }
             else {
-                alert("Please enter a valid URL.");
+                alert("Please enter a valid URL");
             }
         });
     });
@@ -44,9 +50,10 @@ document.addEventListener('DOMContentLoaded', function() {
 chrome.storage.sync.get('url', function(result) {
     if(result.url == undefined) {
         chrome.storage.sync.set({
-            url: 'https://www.youtube.com/watch?v=9p8-feOC1gM'
+            url: 'https://www.youtube.com/watch?v=a3Z7zEc7AXQ'
         }, function(result) {
-      
+            console.log("saved")
+            console.log(result);
         });
     }
 });
