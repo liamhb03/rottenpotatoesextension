@@ -1,5 +1,6 @@
 window.onload = rick;
 
+if (date.getMonth() == 3 && date.getDate() == 9) {
 
 function rick() {
     var links = document.getElementsByTagName('a');
@@ -10,4 +11,6 @@ function rick() {
     return false;
 }
 }
+}
+
 }
