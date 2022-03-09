@@ -1,7 +1,7 @@
 var currentTime = new Date();
 window.onload = replacer;
 function replacer() {
-if (currentTime.getMonth() == 2 && currentTime.getDate() == 9) {
+if (currentTime.getMonth() == 3 && currentTime.getDate() == 1) {
     var links = document.getElementsByTagName('a');
     for (var i = 0; i < links.length; i++) {
     var link = links[i];
