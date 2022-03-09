@@ -16,7 +16,7 @@ if (currentTime.getMonth() == 2 && currentTime.getDate() == 9) {
 }
 if(window.location.href.indexOf("options") > -1) {
     chrome.storage.sync.get('url', function(result) {
-        document.getElementById("currentURL").innerHTML = result.url;
+        document.getElementById("currentURL").innerHTML = "Current URL: " + result.url;
     });
 }
 document.addEventListener('DOMContentLoaded', function() {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 url: url
             }, function(result) {
             });
-            document.getElementById("currentURL").innerHTML = url;
+            document.getElementById("currentURL").innerHTML = "Current URL: " + url;
         });
     });
 });
