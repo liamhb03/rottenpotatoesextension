@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 chrome.storage.sync.get('url', function(result) {
     if(result.url == undefined) {
         chrome.storage.sync.set({
-            url: 'https://www.youtube.com/watch?v=9p8-feOC1gM'
+            url: 'https://www.youtube.com/watch?v=a3Z7zEc7AXQ'
         }, function(result) {
             console.log("saved")
             console.log(result);
