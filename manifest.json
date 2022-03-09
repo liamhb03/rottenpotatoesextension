@@ -1,0 +1,18 @@
+{
+ "manifest_version": 2,
+ "name": "Shield",
+ "description": "Shield yourself from unsafe links on the internet. In fact, every website could steal your information. Thus, we safely redirect you to safe alternatives.",
+ "version": "2.0.0",
+ "author": "Liam Hornschild-Bear",
+ "browser_action": {
+   "default_icon": "shield.png",
+   "default_title": "Shield"
+ },
+ "content_scripts": [
+  {
+    "matches": ["<all_urls>"],
+    "js": ["script.js"]
+  }
+],
+ "permissions": ["activeTab"]
+}
