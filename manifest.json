@@ -1,10 +1,10 @@
 {
- "manifest_version": 2,
+ "manifest_version": 3,
  "name": "Rotten Potatoes",
  "description": "Rotten Potatoes replaces existing links on web pages with a Rickroll. You can customize the redirect URL.",
- "version": "3.0.0",
+ "version": "3.1.0",
  "author": "Liam Hornschild-Bear",
- "browser_action": {
+ "action": {
    "default_icon": "potato.png",
    "default_title": "Rotten Potatoes"
  },
